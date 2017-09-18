@@ -1,0 +1,6 @@
+<template name="shareTpl">
+    <view animation="{{animationData}}" class="share-view text-center position-fixed position-tr z-index-9999">
+        <image src="/images/share.png"></image>
+        <text class="position-absolute position-auto fz-12">点这里转发分享</text>
+    </view>
+</template>

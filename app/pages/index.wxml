@@ -1,0 +1,45 @@
+<view class="pt-10 pl-10 pr-10 pb-10">
+    <view class="text-center">我是吴致远</view>
+    <image src="/images/photo/home-head.jpg" class="margin-auto width-100-100 mt-10" mode="aspectFill"></image>
+    <view class="clearfix mt-10">
+        <text class="float-left">性别</text>
+        <text class="float-right">男</text>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">生日</text>
+        <text class="float-right">2016-05-29</text>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">出生地</text>
+        <text class="float-right">重庆</text>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">出生医院</text>
+        <view class="float-right" data-type="birth" bindtap="openLocation">
+            <text class="text-middle">重庆渝北中医院</text>
+            <image src="/images/location.png" class="img-sm text-middle"></image>
+        </view>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">家庭住址</text>
+        <view class="float-right" data-type="home" bindtap="openLocation">
+            <text class="text-middle">重庆市渝北区香语湖</text>
+            <image src="/images/location.png" class="img-sm text-middle"></image>
+        </view>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">外婆家</text>
+        <view class="float-right" data-type="momHome" bindtap="openLocation">
+            <text class="text-middle">广东省梅州市五华县高华村</text>
+            <image src="/images/location.png" class="img-sm text-middle"></image>
+        </view>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">妈妈</text>
+        <text class="float-right">古秀婷</text>
+    </view>
+    <view class="clearfix mt-10">
+        <text class="float-left">爸爸</text>
+        <text class="float-right">吴云</text>
+    </view>
+</view>

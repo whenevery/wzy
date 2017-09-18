@@ -1,0 +1,14 @@
+<view class="height-100-100 pt-40 pb-40">
+    <view wx:if="{{coursePrevShow}}" bindtap="changeIndex" data-type="up" class="text-center height-40 pt-10 pb-10 position-absolute top-0 left-0 width-100-100">
+        <image class="img" src="/images/up.png"></image>
+    </view>
+    <view wx:if="{{courseData}}" class="pt-10 pb-10 pl-10 pr-10">
+        <view class="fz-20 text-center mb-10">{{courseData.title}}</view>
+        <image src="{{courseData.img}}" mode="aspectFill"></image>
+        <view class="mt-10 fz-10 color-999 text-right">{{courseData.date}}</view>
+        <view>{{courseData.remark}}</view>
+    </view>
+    <view wx:if="{{courseNextShow}}" bindtap="changeIndex" data-type="down" class="text-center height-40 pt-10 pb-10 position-absolute bottom-0 left-0 width-100-100">
+        <image class="img " src="/images/down.png"></image>
+    </view>
+</view>

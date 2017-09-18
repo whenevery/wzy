@@ -1,0 +1,21 @@
+{
+  "name": "adopt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "pack": "gulp clean && gulp build && node archive.js"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^4.0.0",
+    "gulp-less": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "moment": "^2.14.1"
+  }
+}
