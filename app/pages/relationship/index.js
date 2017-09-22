@@ -16,6 +16,10 @@ Page({
     },
     onLoad:function(options){
     },
+
+    onShareAppMessage:function(){
+        return WY.onShareAppMessage('','/pages/relationship/index');
+    },
     showImage:function(e){
         var index = e.currentTarget.dataset.index;
         var urls = [this.data.personList[index].img];

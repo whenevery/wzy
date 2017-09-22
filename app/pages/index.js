@@ -13,6 +13,9 @@ Page({
 
         },this);
     },
+    onShareAppMessage:function(){
+        return WY.onShareAppMessage();
+    },
     chooseLocation:function(){
         wx.chooseLocation({
             success:function(a){

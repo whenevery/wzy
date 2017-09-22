@@ -24,6 +24,10 @@ Page({
         this.setIndex();
         console.log(this.data);
     },
+
+    onShareAppMessage:function(){
+        return WY.onShareAppMessage('','/pages/course/index');
+    },
     setIndex:function(){
         var index = this.data.courseIndex;
         this.setData({
