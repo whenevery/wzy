@@ -22,7 +22,7 @@ module.exports = function(WY){
                     }catch (e){
                         console.error(e);
                     }
-                })
+                });
                 handler.once = [];
             }
         }
@@ -93,7 +93,9 @@ module.exports = function(WY){
         var nextStatus;
         handler && handler.forEach(function(a){
             try{
-                if(a(data , options) === false)nextStatus = false;
+                if(a(data , options) === false){
+                    nextStatus = false;
+                }
             }catch (e){
                 console.error(e);
             }

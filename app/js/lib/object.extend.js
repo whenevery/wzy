@@ -68,12 +68,6 @@ module.exports = function(obj){
                 return data + '';
             }
         };
-        obj.clearNull = function(data){
-            if(data)for(var key in data){
-                if(data[key] === null)data[key] = '';
-            }
-            return data;
-        };
         obj.keyArray = function(data){
             if(data)for(var key in data){
                 if(/\[\d+\]/.test(key)){
@@ -84,6 +78,35 @@ module.exports = function(obj){
                 }
             }
             return data;
+        };
+        obj.randomArray = function(array){
+            array = array || 'QWERTYUIOPASDFGHJKLZXCVBNM'.split('');
+            return array.slice().sort(function(){return .5 - Math.random()}).pop();
+        };
+        obj.randomInt = function(max , min){
+            max = max || 1e5;
+            min = min || 0;
+            return Math.round(min + Math.random() * (max - min ));
+        };
+        obj.sum = function(data , func){
+            func = func || function(a){return a - 0};
+            var sum = 0;
+            data.forEach(function(a){
+                sum += func(a) - 0;
+            });
+            return sum;
+        };
+        obj.copyProp = function(o , prop){
+            var rt = {};
+            if(Array.isArray(prop)){
+                prop.forEach(function(key , i){
+                    rt[key] = o[key];
+                })
+            }
+            else for(var key in prop){
+                rt[key] = o[key];
+            }
+            return rt;
         };
     }
 };

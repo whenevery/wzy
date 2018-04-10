@@ -109,7 +109,7 @@ module.exports = function(obj){
                 var o = data[key];
                 if(o != null){
                     if(str)str+='&';
-                    str += key + '=' + encodeURIComponent(o);
+                    str += key + '=' + (o);
                 }
             }
             return str;
@@ -269,4 +269,12 @@ module.exports = function(obj){
             return hex_sha1(__);
         }
     }
+    obj.getStartBookTime = function(){
+        var nowDay = this.parseDate(new Date , 'd');
+        var nowHour = this.parseDate(new Date , 'H');
+        if(nowHour > 12){
+            return this.parseDate(new Date , 'Y-m-d 12:00:00');
+        }
+        return this.parseDate(new Date().setDate(nowDay - 1) , 'Y-m-d 12:00:00');
+    };
 };

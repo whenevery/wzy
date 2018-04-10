@@ -20,50 +20,8 @@
  */
 .flex(@flex-direction:row,@justify-content:center,@align-items:center){
   display: flex;
-  .flex-direction(@flex-direction);
-  .flex-justify-content(@justify-content);
-  .flex-align-items(@align-items);
-}
-//主轴的方向
-.flex-direction(@flex-direction) when (@flex-direction=row){
-  flex-direction: row;
-}
-.flex-direction(@flex-direction) when (@flex-direction=row-reverse){
-  flex-direction: row-reverse;
-}
-.flex-direction(@flex-direction) when (@flex-direction=column){
-  flex-direction: column;
-}
-.flex-direction(@flex-direction) when (@flex-direction=column-reverse){
-  flex-direction: column-reverse;
-}
-//主轴对齐方式
-.flex-justify-content(@justify-content) when (@justify-content=flex-start){
+  flex-direction: @flex-direction;
   justify-content: @justify-content;
-}
-.flex-justify-content(@justify-content) when (@justify-content=flex-end){
-  justify-content: @justify-content;
-}
-.flex-justify-content(@justify-content) when (@justify-content=center){
-  justify-content: @justify-content;
-}
-.flex-justify-content(@justify-content) when (@justify-content=space-between){
-  justify-content: @justify-content;
-}
-//交叉轴对齐方式
-.flex-align-items(@align-items) when (@align-items=flex-start){
-  align-items: @align-items;
-}
-.flex-align-items(@align-items) when (@align-items=flex-end){
-  align-items: @align-items;
-}
-.flex-align-items(@align-items) when (@align-items=center){
-  align-items: @align-items;
-}
-.flex-align-items(@align-items) when (@align-items=baseline){
-  align-items: @align-items;
-}
-.flex-align-items(@align-items) when (@align-items=stretch){
   align-items: @align-items;
 }
 
@@ -72,4 +30,7 @@
 }
 .flex-auto{
   .flex();
+}
+.flex-between{
+  .flex(row, space-between);
 }

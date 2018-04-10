@@ -22,9 +22,7 @@ Page({
     },
     onLoad:function(options){
         this.setIndex();
-        console.log(this.data);
     },
-
     onShareAppMessage:function(){
         return WY.onShareAppMessage('','/pages/course/index');
     },

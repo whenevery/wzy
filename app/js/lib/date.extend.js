@@ -33,6 +33,17 @@ module.exports = function(obj){
         obj.stringDate = function(str){
             if(!str) return '';
             return [str.slice(0,4) , str.slice(4,6),str.slice(6)];
+        };
+        obj.randomDate = function(type){
+            type = type || 'prev';
+            switch (type){
+                case 'prev':
+                    return obj.parseDate(new Date(Date.now() - 3600 * 1000 * 24 * Math.ceil((Math.random()*1000))),'Y-m-d');
+                case 'next':
+                    return obj.parseDate(new Date(Date.now() + 3600 * 1000 * 24 * Math.ceil((Math.random()*1000))),'Y-m-d');
+                case 'all':
+                    return obj.parseDate(new Date(Date.now() + 3600 * 1000 * 24 * Math.ceil((1000 - Math.random()*2000))),'Y-m-d');
+            }
         }
     }
 };

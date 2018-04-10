@@ -2,7 +2,8 @@
   "pages": [
     "pages/index",
     "pages/course/index",
-    "pages/relationship/index"
+    "pages/relationship/index",
+    "pages/user/index"
   ],
   "window": {
     "navigationBarTitleText":"我的地盘",
@@ -23,6 +24,10 @@
       {
         "pagePath": "pages/relationship/index",
         "text": "人脉"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的"
       }
     ]
   },

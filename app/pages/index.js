@@ -6,12 +6,10 @@ Page({
         ]
     },
     onUnload:function(){
-        WY.wxUnBind(this);
+        WY.oneUnBind(this);
     },
     onLoad:function(options){
-        WY.wxReady('appReady',function(){
-
-        },this);
+      global.WY.wxInit(this)
     },
     onShareAppMessage:function(){
         return WY.onShareAppMessage();

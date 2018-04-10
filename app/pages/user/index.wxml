@@ -1,0 +1,11 @@
+<view class="pt-10 pl-10 pr-10 pb-10 text-center" wx:if="{{userInfo}}">
+    <image class="width-100 height-100 border-rad-100 margin-auto" src="{{userInfo.avatarUrl}}"></image>
+    <view class="flex-between mt-10">
+        <text>昵称</text>
+        <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class="flex-between mt-10">
+        <text>地区</text>
+        <text>{{userInfo.country + userInfo.province + userInfo.city}}</text>
+    </view>
+</view>
